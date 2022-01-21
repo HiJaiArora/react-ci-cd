@@ -6,10 +6,13 @@ function FilterDropDown(props) {
     <div>
       <Dropdown>
         <Dropdown.Toggle variant="success" id="dropdown-basic">
-          Filter Top
+          Filter Top Size
         </Dropdown.Toggle>
 
         <Dropdown.Menu>
+          <Dropdown.Item onClick={() => props.handleFilter("All")}>
+            All Sizes
+          </Dropdown.Item>
           <Dropdown.Item onClick={() => props.handleFilter("XS")}>
             XS
           </Dropdown.Item>

@@ -4,25 +4,28 @@ import FilterDropDown from "./filterDropDown";
 import image from "../assets/Shirt.jpg";
 
 function Cards(props) {
-  const [cardData, setCardData] = React.useState(props);
+  const [cardData, setCardData] = React.useState(props.data);
 
   React.useEffect(() => {
-    setCardData(props);
-  }, [props]);
+    setCardData(props.data);
+  }, [props.data]);
 
   const handleFilter = (size) => {
-    const filteredData = cardData.data.filter((item) => {
-      return item.size.includes(size);
-    });
-    // setCardData(filteredData);
-    console.log(filteredData);
+    if (size !== "All") {
+      const filteredData = cardData.filter((item) => {
+        return item.size.includes(size);
+      });
+      setCardData(filteredData);
+    } else {
+      setCardData(props.data);
+    }
   };
   return (
     <>
       <FilterDropDown handleFilter={handleFilter} />
       <div className="Cards">
         {cardData &&
-          cardData.data.map((item) => {
+          cardData.map((item) => {
             return (
               <div>
                 <Card
