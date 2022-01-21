@@ -1,6 +1,7 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchData } from "../actions/actions";
+import Cards from "../containers/cards";
 
 function WomenTop() {
   const dispatch = useDispatch();
@@ -9,12 +10,12 @@ function WomenTop() {
   React.useEffect(() => {
     dispatch(fetchData());
   }, []);
+
+  const isLoaded = !!data;
   return (
     <div className="App">
-      <header className="App-header">
-        {console.log("fetch", data)}
-        WOMEN TOP'S-
-      </header>
+      <h1>Women's Top</h1>;
+      {isLoaded ? <Cards data={data} /> : <h1>loading...</h1>}
     </div>
   );
 }
