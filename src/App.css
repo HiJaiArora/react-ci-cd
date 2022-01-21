@@ -1,11 +1,12 @@
 .App {
   text-align: center;
+}
+.Cards {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
 }
-
 .sale {
   background-color: red;
   margin-right: 60%;
@@ -14,4 +15,12 @@
 .exc {
   background-color: green;
   margin-right: 60%;
+}
+
+.dropdown {
+  display: flex;
+  flex-direction: row-reverse;
+  /* margin-top: 0%; */
+  margin: 3%;
+  margin-top: 0%;
 }

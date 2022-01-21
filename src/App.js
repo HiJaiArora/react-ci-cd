@@ -3,7 +3,7 @@ import WomenTop from "./womenTop/containers/womenTop";
 
 function App() {
   return (
-    <div className="App">
+    <div>
       <WomenTop />
     </div>
   );
