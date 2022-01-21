@@ -12,7 +12,7 @@ function Cards(props) {
 
   const handleFilter = (size) => {
     if (size !== "All") {
-      const filteredData = cardData.filter((item) => {
+      const filteredData = props.data.filter((item) => {
         return item.size.includes(size);
       });
       setCardData(filteredData);
