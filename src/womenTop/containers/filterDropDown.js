@@ -1,7 +1,14 @@
 import React from "react";
 import Dropdown from "react-bootstrap/Dropdown";
 
+/**
+ * Dropdown component
+ * @param {function} handleFilter to handle data rendered as per top size
+ * @param {array} size holds different top sizes
+ */
+
 function FilterDropDown(props) {
+  const sizes = ["XS", "S", "M", "L", "XL"];
   return (
     <div>
       <Dropdown>
@@ -13,21 +20,13 @@ function FilterDropDown(props) {
           <Dropdown.Item onClick={() => props.handleFilter("All")}>
             All Sizes
           </Dropdown.Item>
-          <Dropdown.Item onClick={() => props.handleFilter("XS")}>
-            XS
-          </Dropdown.Item>
-          <Dropdown.Item onClick={() => props.handleFilter("S")}>
-            S
-          </Dropdown.Item>
-          <Dropdown.Item onClick={() => props.handleFilter("M")}>
-            M
-          </Dropdown.Item>
-          <Dropdown.Item onClick={() => props.handleFilter("L")}>
-            L
-          </Dropdown.Item>
-          <Dropdown.Item onClick={() => props.handleFilter("XL")}>
-            XL
-          </Dropdown.Item>
+          {sizes.map((size, index) => {
+            return (
+              <Dropdown.Item onClick={() => props.handleFilter(size)}>
+                {size}
+              </Dropdown.Item>
+            );
+          })}
         </Dropdown.Menu>
       </Dropdown>
     </div>

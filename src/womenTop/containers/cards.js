@@ -3,6 +3,16 @@ import Card from "react-bootstrap/Card";
 import FilterDropDown from "./filterDropDown";
 import image from "../assets/Shirt.jpg";
 
+/**
+ * card component.
+ * Basically a wrapper around filterdrop down menu and cards
+ * @param {array} props.data Component props
+ * @param {array} options Array of options for Autocomplete
+ * @param {function} handleFilter Callback for when the dropdown filter is selected
+ * @param {props type} cardData Config for useState hook
+ * @param {function} setCardData Input props. See AutoSuggest
+ */
+
 function Cards(props) {
   const [cardData, setCardData] = React.useState(props.data);
 
@@ -27,29 +37,22 @@ function Cards(props) {
         {cardData &&
           cardData.map((item) => {
             return (
-              <div>
-                <Card
-                  key={item.index}
-                  style={{ width: "18rem", margin: "1rem" }}
-                >
-                  <Card.Img variant="top" src={image} />
-                  <Card.Body style={{ height: "10.125rem" }}>
-                    <Card.Title>{item.productName}</Card.Title>
-                    <Card.Title>Price - {item.price}</Card.Title>
-                    <span>Size- </span>
-                    {item.size &&
-                      item.size.map((topsize, index) => {
-                        return <span key={index}>{topsize + " "}</span>;
-                      })}
-                    {item.isSale && (
-                      <Card.Text className="sale">Sale</Card.Text>
-                    )}
-                    {item.isExclusive && (
-                      <Card.Text className="exc">Exclusive</Card.Text>
-                    )}
-                  </Card.Body>
-                </Card>
-              </div>
+              <Card key={item.index} style={{ width: "18rem", margin: "1rem" }}>
+                <Card.Img variant="top" src={image} />
+                <Card.Body style={{ height: "10.125rem" }}>
+                  <Card.Title>{item.productName}</Card.Title>
+                  <Card.Title>Price - {item.price}</Card.Title>
+                  <span>Size Available- </span>
+                  {item.size &&
+                    item.size.map((topsize, index) => {
+                      return <span key={index}>{topsize + " "}</span>;
+                    })}
+                  {item.isSale && <Card.Text className="sale">Sale</Card.Text>}
+                  {item.isExclusive && (
+                    <Card.Text className="exc">Exclusive</Card.Text>
+                  )}
+                </Card.Body>
+              </Card>
             );
           })}
       </div>

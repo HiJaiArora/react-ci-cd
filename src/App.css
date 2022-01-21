@@ -5,16 +5,16 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: center;
+  margin: 5%;
 }
 .sale {
   background-color: red;
-  margin-right: 60%;
+  margin: 5%;
 }
 
 .exc {
   background-color: green;
-  margin-right: 60%;
+  margin: 5%;
 }
 
 .dropdown {
