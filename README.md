@@ -1,6 +1,7 @@
 # react-ci-cd
 
-Demo project fetching data from api using axios using react framework , redux, react hooks and completely responsive application
+Project Developer using react framework
+Demo project fetching data from api using axios, redux, react-hooks and completely responsive application
 
 ## Running locally
 

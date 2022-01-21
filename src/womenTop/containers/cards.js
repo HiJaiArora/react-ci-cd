@@ -11,6 +11,8 @@ import image from "../assets/Shirt.jpg";
  * @param {function} handleFilter Callback for when the dropdown filter is selected
  * @param {props type} cardData Config for useState hook
  * @param {function} setCardData Input props. See AutoSuggest
+ *
+ * Image is single as from api response is coming as string not src so added a random to represent the functionality
  */
 
 function Cards(props) {
