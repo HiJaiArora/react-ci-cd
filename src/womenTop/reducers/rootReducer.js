@@ -1,11 +1,13 @@
 const initialState = {
-  data: 0,
+  data: [],
 };
 
 function rootReducers(state = initialState, action) {
   switch (action.type) {
     case "FETCHED":
-      return { data: state.data + 1 };
+      return { data: action.payload };
+    case "FAILED":
+      return { data: [action.err] };
     default:
       return initialState;
   }
