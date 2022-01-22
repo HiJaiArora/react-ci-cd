@@ -22,7 +22,7 @@ Install node version 16
 2. Follow UI steps above , and `npm run start`.
 3. This will start the UI dev server at http://localhost:3000.
 
-### Instructions to component test cases using react-testing-library
+### Instructions to run component test cases using react-testing-library
 
 1. Checkout [react-ci-cd](https://github.com/HiJaiArora/react-ci-cd).
 2. Run npm test
