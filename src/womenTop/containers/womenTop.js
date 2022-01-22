@@ -23,7 +23,7 @@ function WomenTop() {
   const isLoaded = !!data;
   return (
     <div className="App">
-      <h1>Women's Top</h1>;
+      <h1>Women's Top</h1>
       {isLoaded ? <Cards data={data} /> : <h1>loading...</h1>}
     </div>
   );

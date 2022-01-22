@@ -39,7 +39,7 @@ function Cards(props) {
         {cardData &&
           cardData.map((item) => {
             return (
-              <Card key={item.index} style={{ width: "18rem", margin: "1rem" }}>
+              <Card key={item.index} style={{ width: "15rem", margin: "1rem" }}>
                 <Card.Img variant="top" src={image} />
                 <Card.Body style={{ height: "10.125rem" }}>
                   <Card.Title>{item.productName}</Card.Title>
