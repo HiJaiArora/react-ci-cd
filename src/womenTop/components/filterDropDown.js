@@ -22,7 +22,10 @@ function FilterDropDown(props) {
           </Dropdown.Item>
           {sizes.map((size, index) => {
             return (
-              <Dropdown.Item onClick={() => props.handleFilter(size)}>
+              <Dropdown.Item
+                key={index}
+                onClick={() => props.handleFilter(size)}
+              >
                 {size}
               </Dropdown.Item>
             );

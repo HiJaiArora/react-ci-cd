@@ -1,7 +1,7 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchData } from "../actions/actions";
-import Cards from "../containers/cards";
+import Cards from "../components/cards";
 
 /**
  * Women Top header component.
